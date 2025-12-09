@@ -643,7 +643,8 @@ app.post("/api/blog/posts/:id/rating", (req, res) => {
   });
 });
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
+
 app.listen(PORT, () => {
   console.log("Backend escuchando en http://localhost:" + PORT);
 });
